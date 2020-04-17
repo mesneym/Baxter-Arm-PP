@@ -68,3 +68,6 @@ roslaunch baxter_moveit_config demo_baxter.launch right_electric_gripper:=true l
 
 ### Rviz output
 Seperate output video for rviz is added. In this video, determining the waypoint to pick the red block is shown.
+
+### Output videos
+To view the output video, please click this [link](https://drive.google.com/drive/folders/1K3fAT9H6MoRdIDPxjhtreOpWxhfN9WQ3?usp=sharing)
