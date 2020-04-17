@@ -38,3 +38,33 @@ source devel/setup.bash
 ### Sample Output
 ![Alt Text](gif/sidegif.gif)
 ![Alt Text](gif/topgif.gif)
+
+### Rviz Move-it
+The way points were obtained using move-it package and by employing OMPL library in Rviz.
+In order to launch move-it in rviz, run the following commands:
+Open a new terminal and launch baxter into gazebo
+```
+cd ros_ws
+source devel/setup.bash
+./baxter.sh sim
+roslaunch baxter_gazebo baxter_world.launch
+```
+Open a new terminal and check to if the robot is enabled
+```
+cd ros_ws
+source devel/setup.bash
+rosrun baxter_tools enable_robot.py -e
+```
+To run the joint trajectory controller run the following command in the same terminal
+```
+rosrun baxter_interface joint_trajectory_action_server.py
+```
+Open a new terminal and execute following command to launch Moveit-Rviz
+```
+cd ros_ws
+source devel/setup.bash
+roslaunch baxter_moveit_config demo_baxter.launch right_electric_gripper:=true left_electric_gripper:=true
+```
+
+### Rviz output
+Seperate output video for rviz is added. In this video, determining the waypoint to pick the red block is shown.
